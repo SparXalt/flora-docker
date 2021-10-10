@@ -1,8 +1,8 @@
 FROM ubuntu:latest
 
-EXPOSE 28444
-EXPOSE 28555
-EXPOSE 28447
+EXPOSE 18644
+EXPOSE 18755
+EXPOSE 18647
 
 ENV FLORA_ROOT=/root/.flora/mainnet
 ENV keys="generate"

@@ -7,12 +7,12 @@ These examples shows valid setups using Flora for both docker run and docker-com
 ### Docker run
 
 ```bash
-docker run --name flora -d ghcr.io/sparxalt/flora-docker:latest --expose=28444 -v /path/to/plots:/plots
+docker run --name flora -d ghcr.io/sparxalt/flora-docker:latest --expose=18644 -v /path/to/plots:/plots
 ```
 Syntax
 ```bash
 docker run --name <container-name> -d ghcr.io/sparxalt/flora-docker:latest 
-optional accept incoming connections: --expose=28444
+optional accept incoming connections: --expose=18644
 optional: -v /path/to/plots:/plots
 ```
 
@@ -26,7 +26,7 @@ services:
     restart: unless-stopped
     image: ghcr.io/sparxalt/flora-docker:latest
     ports:
-      - 28444:28444
+      - 18644:18644
     volumes:
       - /path/to/plots:/plots
 ```
@@ -106,7 +106,7 @@ services:
     restart: unless-stopped
     image: ghcr.io/sparxalt/flora-docker:latest
     ports:
-      - 28444:28444
+      - 18644:18644
     environment:
       # Farmer Only    
 #     - farmer=true
@@ -150,7 +150,7 @@ docker exec -it flora venv/bin/flora farm summary
 ### Connect to testnet?
 
 ```bash
-docker run -d --expose=48444 -e testnet=true --name flora ghcr.io/sparxalt/flora-docker:latest
+docker run -d --expose=58644 -e testnet=true --name flora ghcr.io/sparxalt/flora-docker:latest
 ```
 
 #### Need a wallet?
